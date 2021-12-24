@@ -1,0 +1,15 @@
+doctype html 
+
+html 
+  include "./head.pugs"
+  body 
+    //  接收koa-views传过来的数据
+    - var f = friends
+    case f
+      when 0
+        p 你没有朋友
+      when 1
+        p 你有很少朋友
+      default 
+        p 你有#{f}朋友
+    div(class="header") 这是#{r}页面
